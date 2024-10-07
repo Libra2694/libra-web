@@ -1,0 +1,334 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #343a40;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Form and Info Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+.form-section {
+    width: 50%;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #007BFF;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #FFD700;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 40%;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.contact-section ul {
+    list-style: none;
+}
+
+.contact-section li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-section i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.contact-section a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-section li:hover {
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack form and contact sections vertically */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%; /* Full width on smaller devices */
+        padding: 20px;
+    }
+
+    /* Adjust form section width to fit mobile screen */
+    .form-section, .contact-section {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Add some space between sections */
+    }
+
+    /* Adjust navigation */
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust form elements */
+    textarea, button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    header .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        padding: 5px 0;
+    }
+
+    .form-section h2, .contact-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Centering game list section */
+.game-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
+}
+
+.game-list h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.game {
+    width: 100%; /* To control width in mobile view */
+    max-width: 700px; /* Restrict the max width */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
+}
+
+.game .video {
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    .game .video iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* tombol next */
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #0056b3;
+}
+
+/* image list game */
+.media img, .media iframe {
+    max-width: 100%;
+    height: auto;
+}

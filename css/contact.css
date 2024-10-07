@@ -65,6 +65,20 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
 /* Contact Form and Info Container */
 .contact-container {
     display: flex;
@@ -215,4 +229,54 @@ button:hover {
 /* Terapkan animasi slide-in pada bagian contact */
 .contact-section {
     animation: slideIn 1.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack form and contact sections vertically */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%; /* Full width on smaller devices */
+        padding: 20px;
+    }
+
+    /* Adjust form section width to fit mobile screen */
+    .form-section, .contact-section {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Add some space between sections */
+    }
+
+    /* Adjust navigation */
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust form elements */
+    textarea, button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    header .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        padding: 5px 0;
+    }
+
+    .form-section h2, .contact-section h2 {
+        font-size: 1.5rem;
+    }
 }

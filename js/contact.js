@@ -1,24 +1,25 @@
-// Tunggu sampai halaman ter-load sepenuhnya
-window.onload = function() {
-    document.getElementById('rating-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Mencegah submit form standar
+function SendMail() {
+    // Ambil elemen rating yang dipilih
+    var rating = document.querySelector('input[name="rating"]:checked');
+    
+    // Validasi apakah rating sudah dipilih
+    if (!rating) {
+        alert("Please select a rating!");
+        return;
+    }
 
-        // Mengambil nilai dari form
-        const rating = document.querySelector('input[name="rating"]:checked').value;
-        const feedback = document.getElementById('feedback').value;
+    // Ambil data dari form
+    var params = {
+        rating_form: rating.value,  // Nilai rating yang dipilih
+        feedback: document.getElementById("feedback").value,  // Feedback pengguna
+        reply_to: document.getElementById("reply_to").value   // Email pengguna
+    };
 
-        // Mengirimkan email menggunakan EmailJS
-        emailjs.send("service_poq885v", "template_ir2fike", {
-            rating: rating, // Mengisi placeholder {{rating}} di template
-            feedback: feedback, // Mengisi placeholder {{feedback}} di template
-            reply_to: "librastudio2694@gmail.com" // Alamat email tujuan
-        })
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Email berhasil dikirim!');
-        }, function(error) {
-            console.log('FAILED...', error);
-            alert('Pengiriman email gagal. Silakan coba lagi.');
+    // Kirim email menggunakan emailjs
+    emailjs.send("service_poq85v", "template_ir2fike", params)
+        .then(function (res) {
+            alert("Success! Email sent with status: " + res.status);  // Berhasil
+        }, function (error) {
+            alert("Failed to send email: " + error);  // Gagal
         });
-    });
-};
+}
