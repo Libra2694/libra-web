@@ -327,8 +327,25 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* image list game */
+/* style image dan video di game.js */
 .media img, .media iframe {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Ambil 100% lebar container */
+    max-width: 100%; /* Buat video fleksibel sesuai ukuran container */
+    height: auto; /* Pertahankan proporsi video */
+}
+
+/* Untuk layar lebih besar, berikan sedikit margin */
+.game {
+    max-width: 700px; /* Batasi ukuran maksimal game card */
+    margin: 0 auto; /* Center card pada layar besar */
+}
+.media iframe {
+    width: 100%; /* Ambil seluruh lebar parent element */
+    height: auto; /* Pertahankan proporsi video */
+    aspect-ratio: 16 / 9; /* Atur rasio aspek video */
+}
+@media screen and (min-width: 769px) {
+    .game {
+        max-width: 900px; /* Tingkatkan ukuran maksimal card di layar besar */
+    }
 }

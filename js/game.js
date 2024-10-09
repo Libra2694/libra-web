@@ -1,12 +1,15 @@
 // Array of game data
 const games = [
-    { title: "HarvestMoon Hero of Leaf Valley Patch Indo", image: "https://i.ibb.co.com/1sx4npP/image.png", download: "../game/hmholv.html" },
+    { title: "HarvestMoon Hero of Leaf Valley Patch Indo", image: "https://i.ibb.co.com/1sx4npP/image.png", download: "../game//hmholv/" },
     { title: "Rune Factory 3 Patch Indo", video: "https://www.youtube.com/embed/_NlNzVKUZ24", download: "https://sfl.gl/RF3PatchIndo" },
-    { title: "New Teksture HM HOLV V1", video: "https://www.youtube.com/embed/AVCxy_YcBwU", download: "https://www.youtube.com/embed/AVCxy_YcBwU" },
-    { title: "Game Title 4", video: "https://www.youtube.com/embed/example4", download: "download_link_game4.zip" },
-    { title: "Game Title 5", video: "https://www.youtube.com/embed/example5", download: "download_link_game5.zip" },
-    { title: "Game Title 6", video: "https://www.youtube.com/embed/example6", download: "download_link_game6.zip" },
-    { title: "Game Title 7", video: "https://www.youtube.com/embed/example7", download: "download_link_game7.zip" },
+    { title: "Mini Militia Mod Free Fire", image: "https://i.ibb.co.com/HhNwCwg/image.png", download: "../game/mm_mod_ff/" },
+    { title: "Thomas and Friend Magic Track", video: "https://www.youtube.com/embed/K25l_00CExw", download: "https://play.google.com/store/apps/details?id=com.budgestudios.googleplay.ThomasAndFriendsMagicalTracks" },
+    { title: "HarvestMoon 2 Bahasa Indonesia (emulator JAVA)", video: "https://www.youtube.com/embed/DngReQxqU90", download: "https://sfl.gl/HM2IndoJAVA" },
+    { title: "Dynamons MOD", image: "https://i.ibb.co.com/8XYtt8s/image.png", download: "../game/dynamons/" },
+    { title: "Labyrinth Legend MOD", image: "https://i.ibb.co.com/9yfLwGh/image.png", download: "../game/labyrinthlegend/" },
+    { title: "My Fishing World MOD", video: "https://www.youtube.com/embed/lnpyWJQRb3U", download: "https://sfl.gl/MyFhisingWorld" },
+    { title: "Dungeon Village MOD", image: "https://i.ibb.co.com/b2xKwJV/image.png", download: "../game/dungeonvillage/" },
+    // { title: "Game Title 7", video: "https://www.youtube.com/embed/example7", download: "#" },
     // Tambahkan lebih banyak game jika diperlukan
 ];
 
